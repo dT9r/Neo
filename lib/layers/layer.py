@@ -1,11 +1,13 @@
-import theano.tensor as T
-from theano import function
-import numpy as np
-
-
 class Layer(object):
-	def _get_output(input):
-		raise NotImplemented
-	def _update_parameters(delta):
-		raise NotImplemented
+    def __init__(self):
+        self.output = 0
+        self.input = 0
 
+    def get_output(self, inp):
+        pass
+
+    def update_parameters(self, output_gradient, rate):
+        pass
+
+    def get_input_gradient(self, output_gradient):
+        pass
